@@ -1,2 +1,4 @@
-/.vscode
-/bingrewards.exe
+\target
+\bingrewards.exe
+\.vscode
+\target\.rustc_info.json
