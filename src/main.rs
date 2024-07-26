@@ -1,6 +1,7 @@
 use rdev::{simulate, EventType, Key};
 use rand::seq::SliceRandom;
 use rand::thread_rng;
+use rand::Rng;
 use std::thread::sleep;
 use std::time::Duration;
 

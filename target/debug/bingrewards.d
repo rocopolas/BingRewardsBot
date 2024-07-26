@@ -1,1 +1,1 @@
-D:\Programacion\rust\target\debug\bingrewards.exe: D:\Programacion\rust\src\main.rs
+D:\Programacion\BingRewardsBot\target\debug\bingrewards.exe: D:\Programacion\BingRewardsBot\src\main.rs
