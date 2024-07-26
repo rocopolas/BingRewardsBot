@@ -1,0 +1,8 @@
+[package]
+name = "bingrewards"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+rdev = "0.4.0"
+rand = "0.8.5" 
