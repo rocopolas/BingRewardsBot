@@ -4,7 +4,6 @@ use rand::thread_rng;
 use rand::Rng;
 use std::thread::sleep;
 use std::time::Duration;
-use std::process::Command;
 
 fn main() {
 
@@ -41,24 +40,6 @@ fn main() {
 
     sleep(Duration::from_secs(4));
     let mut rng = thread_rng();
-
-    println!("¿Qué quieres hacer despues de que termine?");
-    println!("1. No apagar pc");
-    println!("2. Apagar pc");
-
-    let mut opcion = String::new();
-
-    io::stdin()
-        .read_line(&mut opcion)
-        .expect("Error al leer la entrada");
-
-    let opcion: u32 = match opcion.trim().parse() {
-        Ok(num) => num,
-        Err(_) => {
-            println!("Entrada inválida. Por favor, ingresa 1 o 2.");
-            return; // Salir del programa si la entrada no es válida
-        }
-    };
 
     for _ in 0..100 {
         sleep(Duration::from_secs(1));
@@ -115,21 +96,4 @@ fn main() {
         let numero_aleatorio = rng.gen_range(5000..=7000);
         sleep(Duration::from_millis(numero_aleatorio));w
     }
-
-    match opcion {
-        1 => {
-            
-        }
-        2 => {
-            Command::new("shutdown")
-                .arg("/s") // Apagar
-                .arg("/t") // Tiempo de espera (opcional)
-                .arg("0")  // 0 segundos
-                .status()?;
-            Ok(())
-        }
-        _ => println!("Opción no válida."), 
-    }
-
-
 }
